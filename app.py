@@ -20,7 +20,7 @@ def View_files(Filename):
             for file in files:
                 print(file)
     except Exception as e:
-        print("An error accured")    
+        print("An error occurred")    
 def Delet_file(Filename):
     try:
         os.remove(Filename)
@@ -28,7 +28,7 @@ def Delet_file(Filename):
     except FileNotFoundError:
         print("{Filename} not found")
     except Exception as e:
-        print("An error accured") 
+        print("An error occurred") 
     
 def Read_file(Filename):
     try:
@@ -38,7 +38,7 @@ def Read_file(Filename):
     except FileNotFoundError:
         print("{Filename} not found")
     except Exception as e:
-        print("An error accured")   
+        print("An error occurred")   
     
     
 def Edit_file(Filename):
@@ -49,7 +49,7 @@ def Edit_file(Filename):
     except FileNotFoundError:
         print("{Filename} not found")
     except Exception as e:
-        print("An error accured") 
+        print("An error occurred") 
         
           
 def main():
@@ -61,3 +61,23 @@ def main():
         print("4: Read File: ")
         print("5: Edit File: ")
         print("6: Exist: ")
+        try:
+            choice = int(input("Enter Your choice: ))
+            if choice == 1:
+					Filename = input("Enter The file name: )		   
+                    Create_file(Filename)
+            elif choice == 2:
+                    View_files()
+            elif choice == 3:
+					Filename = input("Enter The file name: )				 
+                    Delet_file(Filename)
+            elif choice == 4:
+					Filename = input("Enter The file name: )	
+                    Read_file(Filename)
+            elif choice == 5:
+					Filename = input("Enter The file name: )					 	
+                    Edit_file(Filename)
+            elif choice == 6:
+                    print("Closing The App..............)
+		    else:
+					print("Please Enter an valid Syntax")
